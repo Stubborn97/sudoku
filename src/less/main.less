@@ -1,0 +1,63 @@
+@shandowBottom: 0 0.2rem 0.3rem rgba(48, 48, 48, 192);
+@shandowTop: 0 -0.1rem 0.2rem rgba(48, 48, 48, 192);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  font-size: 14px;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Consolas", "微软雅黑";
+  user-select: none;
+  max-width: 450px;
+
+  >* {
+    max-width: 450px;
+  }
+}
+
+.title {
+  padding: 1rem;
+  background-color: steelblue;
+  color: #fff;  
+  margin-bottom: 2rem;
+  box-shadow: @shandowBottom;
+}
+
+.hidden {
+  display: none;
+}
+
+.dashboard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  box-shadow: @shandowTop;
+  height: 3rem;
+  
+  .buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    button {
+      float: left;
+      width: 25%;
+      height: 3rem;
+      background-color: steelblue;
+      font-size: 1.3rem;
+      color: white;
+      border: 1px solid #ccc;
+    }
+  }
+}
